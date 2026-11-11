@@ -26,9 +26,9 @@ case $opt in
 2) clear ; trialtrojan ;;
 3) clear ; renew-tr ;;
 4) clear ; del-tr ;;
-5) clear ; cek-tr ;;
+5) clear ; check-tr ;;
 6) clear ; cat /etc/log-create-trojan.log ; exit ;;
 0) clear ; menu ;;
 x) exit ;;
-*) echo "Anda Salah Tekan" ; sleep 1 ; m-trojan ;;
+*) echo "You pressed wrong button" ; sleep 1 ; m-trojan ;;
 esac
