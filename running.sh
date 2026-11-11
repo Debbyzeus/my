@@ -36,10 +36,10 @@ Tipe=$NAME
 URL_SUPPORT=$HOME_URL
 basedong=$ID
 
-# VPS IP (lokal, tanpa curl ke ipinfo.io yang lambat)
+# VPS IP (local, without a slow curl to ipinfo.io)
 MYIP=$(cat /etc/myipvps 2>/dev/null || curl -s ifconfig.me)
 
-# CHEK STATUS
+# CHECK STATUS
 tls_v2ray_status=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 nontls_v2ray_status=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 vless_tls_v2ray_status=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
@@ -170,10 +170,10 @@ totalram=$(($total_ram/1024))
 # CPU USAGE
 cpu_usage=$(top -bn1 | grep "Cpu(s)" | awk '{print $2}' | cut -d'%' -f1 2>/dev/null || echo "N/A")
 
-# KERNEL TERBARU
-kernelku=$(uname -r)
+# LATEST KERNEL
+mykernel=$(uname -r)
 
-Name=$"fahrialimudin"
+Name=$"debbyzeus"
 Exp=$"Lifetime"
 # GETTING DOMAIN NAME
 Domen="$(cat /etc/xray/domain)"
@@ -232,7 +232,7 @@ echo -e "\e[1;32m Vless gRPC          \e[0m: 443"
 echo -e "\e[1;32m Trojan gRPC         \e[0m: 443"
 echo -e "\e[1;32m Shadowsocks gRPC    \e[0m: 443"
 echo -e "\e[1;33m -------------------------------------------------\e[0m"
-echo -e "\e[1;34m                     t.me/fahrialimudin           \e[0m"
+echo -e "\e[1;34m                     t.me/premiumnaijabot           \e[0m"
 echo -e "\e[1;33m -------------------------------------------------\e[0m"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
