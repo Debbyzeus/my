@@ -133,5 +133,5 @@ case $Restart in
         clear
         exit
         ;;
-        *) echo -e "" ; echo "Anda salah tekan" ; sleep 1 ; restart ;;
+        *) echo -e "" ; echo "You pressed wrong button" ; sleep 1 ; restart ;;
 esac
