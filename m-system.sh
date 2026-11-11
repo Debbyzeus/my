@@ -10,7 +10,7 @@ echo -e " [\e[36m•1\e[0m] Panel Domain"
 echo -e " [\e[36m•2\e[0m] Speedtest VPS"
 echo -e " [\e[36m•3\e[0m] Set Auto Reboot"
 echo -e " [\e[36m•4\e[0m] Restart All Service"
-echo -e " [\e[36m•5\e[0m] Cek Bandwith"
+echo -e " [\e[36m•5\e[0m] Check Bandwith"
 echo -e " [\e[36m•6\e[0m] Install TCP BBR"
 echo -e " [\e[36m•7\e[0m] DNS CHANGER"
 echo -e ""
@@ -32,5 +32,5 @@ case $opt in
 7) clear ; m-dns ; exit ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
-*) echo -e "" ; echo "Anda salah tekan" ; sleep 1 ; m-system ;;
+*) echo -e "" ; echo "You pressed wrong button" ; sleep 1 ; m-system ;;
 esac
