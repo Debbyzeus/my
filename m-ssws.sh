@@ -26,9 +26,9 @@ case $opt in
 2) clear ; trialssws ;;
 3) clear ; renew-ssws ;;
 4) clear ; del-ssws ;;
-5) clear ; cek-ssws ;;
+5) clear ; check-ssws ;;
 6) clear ; cat /etc/log-create-shadowsocks.log ; exit ;;
 0) clear ; menu ;;
 x) exit ;;
-*) echo "salah tekan" ; sleep 1 ; m-ssws ;;
+*) echo "wrong press" ; sleep 1 ; m-ssws ;;
 esac
