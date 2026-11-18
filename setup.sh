@@ -36,7 +36,7 @@ yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 # domain random
-CDN="https://raw.githubusercontent.com/fahrialimudin/xray/main/ssh"
+CDN="https://raw.githubusercontent.com/debbyzeus/my/main/ssh"
 cd /root
 #System version number
 if [ "${EUID}" -ne 0 ]; then
@@ -85,7 +85,7 @@ secs_to_human() {
     echo "Installation time : $(( ${1} / 3600 )) hours $(( (${1} / 60) % 60 )) minute's $(( ${1} % 60 )) seconds"
 }
 start=$(date +%s)
-ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+ln -fs /usr/share/zoneinfo/Africa/Lagos /etc/localtime
 sysctl -w net.ipv6.conf.all.disable_ipv6=1 >/dev/null 2>&1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1 >/dev/null 2>&1
 
@@ -142,21 +142,21 @@ echo -e "$BGreen      Install SSH & Setup VPS         $NC"
 echo -e "\e[33m-----------------------------------\033[0m"
 sleep 0.5
 clear
-wget https://raw.githubusercontent.com/fahrialimudin/xray/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && bash ssh-vpn.sh
+wget https://raw.githubusercontent.com/debbyzeus/my/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && bash ssh-vpn.sh
 #Instal SSH Websocket dulu sebelum Xray (supaya port 2095 siap, nginx tidak bentrok)
 echo -e "\e[33m-----------------------------------\033[0m"
 echo -e "$BGreen      Install SSH Websocket           $NC"
 echo -e "\e[33m-----------------------------------\033[0m"
 sleep 0.5
 clear
-wget https://raw.githubusercontent.com/fahrialimudin/xray/main/sshws/insshws.sh && chmod +x insshws.sh && bash insshws.sh
+wget https://raw.githubusercontent.com/debbyzeus/my/main/sshws/insshws.sh && chmod +x insshws.sh && bash insshws.sh
 #Instal Xray (nginx start setelah ws-dropbear sudah di port 2095)
 echo -e "\e[33m-----------------------------------\033[0m"
 echo -e "$BGreen          Install XRAY              $NC"
 echo -e "\e[33m-----------------------------------\033[0m"
 sleep 0.5
 clear
-wget https://raw.githubusercontent.com/fahrialimudin/xray/main/xray/ins-xray.sh && chmod +x ins-xray.sh && bash ins-xray.sh
+wget https://raw.githubusercontent.com/debbyzeus/my/main/xray/ins-xray.sh && chmod +x ins-xray.sh && bash ins-xray.sh
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
@@ -195,7 +195,7 @@ if [ ! -f "/etc/log-create-shadowsocks.log" ]; then
 echo "Log Shadowsocks Account " > /etc/log-create-shadowsocks.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/fahrialimudin/xray/main/menu/versi )
+serverV=$( curl -sS https://raw.githubusercontent.com/debbyzeus/my/main/menu/versi )
 echo $serverV > /opt/.ver
 curl -sS ipv4.icanhazip.com > /etc/myipvps
 echo ""
@@ -235,7 +235,7 @@ echo "   - Trojan gRPC              : 443" | tee -a log-install.txt
 echo "   - Shadowsocks gRPC         : 443" | tee -a log-install.txt
 echo ""
 echo "=============================Contact==============================" | tee -a log-install.txt
-echo "---------------------------t.me/fahrialimudin-----------------------------" | tee -a log-install.txt
+echo "---------------------------t.me/premiumnaijabot-----------------------------" | tee -a log-install.txt
 echo "==================================================================" | tee -a log-install.txt
 echo -e ""
 echo ""
