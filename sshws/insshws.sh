@@ -7,8 +7,8 @@ cd
 apt-get install -y python3 2>/dev/null
 
 # Install ws-dropbear dan ws-stunnel dari repo (binary python)
-wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/fahrialimudin/xray/main/sshws/ws-dropbear
-wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/fahrialimudin/xray/main/sshws/ws-stunnel
+wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/debbyzeus/my/main/sshws/ws-dropbear
+wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/debbyzeus/my/main/sshws/ws-stunnel
 
 chmod +x /usr/local/bin/ws-dropbear
 chmod +x /usr/local/bin/ws-stunnel
