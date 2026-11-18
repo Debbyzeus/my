@@ -28,16 +28,16 @@ source /etc/os-release
 ver=$VERSION_ID
 
 # detail nama perusahaan
-country=ID
-state=Indonesia
-locality=Jakarta
+country=Nigeria
+state=Lagos
+locality=Lagos
 organization=none
 organizationalunit=none
 commonname=none
 email=none
 
 # simple password minimal
-curl -sS https://raw.githubusercontent.com/fahrialimudin/xray/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
+curl -sS https://raw.githubusercontent.com/debbyzeus/my/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
 chmod +x /etc/pam.d/common-password
 
 cd
@@ -84,8 +84,8 @@ apt -y install jq
 apt -y install wget curl
 apt -y install net-tools
 
-# set time GMT +7
-ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+# set time GMT +1
+ln -fs /usr/share/zoneinfo/Africa/Lagos /etc/localtime
 
 # set locale
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
@@ -103,7 +103,7 @@ apt -y install nginx
 cd
 rm -f /etc/nginx/sites-enabled/default
 rm -f /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/fahrialimudin/xray/main/ssh/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/debbyzeus/my/main/ssh/nginx.conf"
 mkdir -p /home/vps/public_html
 mkdir -p /etc/nginx/conf.d
 
@@ -142,7 +142,7 @@ systemctl restart nginx
 # Total: 4 x 50 = 200 clients (cukup untuk VPS 1GB)
 # ============================================================
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/fahrialimudin/xray/main/ssh/newudpgw"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/debbyzeus/my/main/ssh/newudpgw"
 chmod +x /usr/bin/badvpn-udpgw
 
 # Tulis ke rc.local dengan max-clients 50
