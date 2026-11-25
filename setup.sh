@@ -109,7 +109,7 @@ clear
     echo -e "$BGreen 1. Use Domain Random / Gunakan Domain Random $NC"
     echo -e "$BGreen 2. Choose Your Own Domain / Gunakan Domain Sendiri $NC"
     echo -e "$BYellow----------------------------------------------------------$NC"
-    read -rp " Pilih domain yang akan kamu pakai : " dns
+    read -rp " Select the domain that you will use : " dns
     dns="${dns//[[:space:]]/}"
     if [[ "$dns" == "1" ]]; then
         clear
