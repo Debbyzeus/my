@@ -18,7 +18,7 @@ fetch_asset() {
 
 DOMAIN_PATH=$(cat /etc/xray/domain 2>/dev/null || true)
 if [[ -z "$DOMAIN_PATH" ]]; then
-    echo "Domain belum tersedia di /etc/xray/domain"
+    echo "Domain is not yet available in /etc/xray/domain"
     exit 1
 fi
 NS_DOMAIN="dns.${DOMAIN_PATH}"
